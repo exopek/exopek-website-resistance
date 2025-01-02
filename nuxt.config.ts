@@ -7,6 +7,13 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/seo'
-  ]
+    '@nuxtjs/seo',
+    '@pinia/nuxt',
+    '@nuxtjs/tailwindcss'
+  ],
+
+  runtimeConfig: {
+    openaiApiKey: process.env.OPENAI_API_KEY,
+    pixabayApiKey: process.env.PIXABAY_API_KEY
+  }
 })

@@ -2,8 +2,7 @@
   <div>
     <Breadcrumb :breadcrumbs="[
       { name: 'Startseite', path: '/' },
-      { name: 'Widerstandsbänder', path: '/widerstandsbander' },
-      { name: 'Fitness Anfänger', path: '/widerstandsbander/fitness-anfanger' }
+      { name: 'Fitness Anfänger', path: '/fitness-anfanger' }
     ]" />
     <h1>Widerstandsbänder für fitenss Anfänger</h1>
     <p>Our medium resistance bands are ideal for fitness beginners looking to start their journey. They offer the perfect balance of resistance to help build strength and endurance.</p>
