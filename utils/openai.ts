@@ -34,6 +34,7 @@ export async function generateContent(targetGroup: string, key: string): Promise
     });
 
     const content = response.choices[0].message.content || '[]';
+    console.log(content);
     return JSON.parse(content) as Content[];
   } catch (error) {
     console.error('Error generating content:', error);

@@ -1,16 +1,6 @@
 export const contentPrompts = {
     general: (targetGroup: string) => `
   Erstelle einen ausführlichen, SEO-optimierten Artikel über Widerstandsbänder kaufen für ${targetGroup}.
-  Der Artikel sollte folgende Aspekte abdecken:
-  
-  1. Einleitung und Zielgruppenbeschreibung
-  2. Spezifische Vorteile für ${targetGroup}
-  3. Empfohlene Widerstandsstärken. Gehe dabei als Version auf das EXOPEK Pro I und EXOPEK Pro II ein. Variante I hat leichtere Widerstandsstärken und Variante II hat stärkere Widerstandsstärken.
-  4. Übungsbeispiele und Trainingstipps
-  5. Sicherheitshinweise. Gehe dabei auf unsere Sleve-Ummantelung ein, was die Widerstandsbänder zusätzlich langlebiger macht.
-  6. Kaufempfehlung für die Widerstandsbänder von Exopek. Gehe dabei auf die Qualität, Haltbarkeit und das Preis-Leistungs-Verhältnis ein.
-  
-  Verwende einen professionellen, aber zugänglichen Schreibstil. 
   Formatiere die Antworten als JSON-Array mit folgender Struktur:
   [
     {
@@ -18,6 +8,18 @@ export const contentPrompts = {
       "content": "Content passend zur Überschrift hier"
     }
   ]
+
+  Der Artikel sollte folgende Aspekte abdecken:
+  1. Einleitung und Zielgruppenbeschreibung
+  2. Spezifische Vorteile für ${targetGroup}
+  3. Empfohlene Widerstandsstärken. Gehe dabei als Version auf das EXOPEK Pro I und EXOPEK Pro II ein. Variante I hat leichtere Widerstandsstärken und Variante II hat stärkere Widerstandsstärken.
+  4. Übungsbeispiele und Trainingstipps
+  5. Sicherheitshinweise. Gehe dabei auf unsere Sleve-Ummantelung ein, was die Widerstandsbänder zusätzlich langlebiger macht.
+  6. Kaufempfehlung für die Widerstandsbänder von Exopek. Gehe dabei auf die Qualität, Haltbarkeit und das Preis-Leistungs-Verhältnis ein.
+  
+  Verwende einen professionellen, aber zugänglichen Schreibstil.
+  Im Content darf nicht in Quotation Marks (") oder Slashes geschrieben werden.
+  Gebe keinen hinweis auf json oder dass es sich um json handelt.
   `,
   
     faq: (targetGroup: string) => `

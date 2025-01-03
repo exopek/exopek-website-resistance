@@ -1,7 +1,7 @@
 <template>
-    <div class="flex center pl-36 pr-36">
-        <Carousel :per-page="4" :autoplay="false" :loop="false" :speed="5000">
-            <div v-for="(product, index) in products" :key="index" class="bg-white p-4 rounded-lg shadow">
+    <div class="w-full">
+        <Carousel :per-page="2" :autoplay="true" :loop="true" :speed="5000">
+            <div v-for="(product, index) in products" :key="index" class="p-2">
                 <ProductCard :product="product" />
             </div>
         </Carousel>

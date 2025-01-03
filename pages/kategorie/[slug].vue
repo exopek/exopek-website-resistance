@@ -23,9 +23,8 @@
           </div>
         </header>
   
-        <article v-if="!error" class="py-12">
-          <div 
-           v-if="pageContent.content?.length"
+        <article v-if="!error && pageContent.content?.length" class="py-12">
+          <div
           class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
             <ContentSection :contentArray="pageContent.content" />
           </div>
@@ -61,6 +60,7 @@ import type { PageContent } from '~/utils/types'
   onMounted(async () => {
     try {
       pageContent.value = await generatePageContent(route.params.slug as string)
+      console.log('Loaded page content:', pageContent.value);
     } catch (e) {
       console.error('Error loading page content:', e)
     }
