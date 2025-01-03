@@ -13,7 +13,7 @@ export interface FAQ {
   export interface PageContent {
     title: string;
     subtitle: string;
-    content: string;
+    content: Content[];
     images: Image[];
     faqs: FAQ[];
   }
@@ -22,4 +22,16 @@ export interface FAQ {
     title: string;
     strength: string;
     focus: string;
+  }
+
+  export interface Product {
+    title: string;
+    description: string;
+    price: number;
+    image: Image;
+  }
+
+  export interface Content {
+    title: string;
+    content: string;
   }

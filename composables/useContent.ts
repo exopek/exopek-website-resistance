@@ -15,8 +15,8 @@ export function useContent() {
 
     try {
       const [content, faqs, images] = await Promise.all([
-        generateContent(targetGroup, config.openaiApiKey),
-        generateFAQs(targetGroup, config.openaiApiKey),
+        generateContent(targetGroup, config.public.openaiApiKey),
+        generateFAQs(targetGroup, config.public.openaiApiKey),
         []
       ]);
 

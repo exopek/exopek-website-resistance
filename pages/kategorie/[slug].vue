@@ -9,7 +9,7 @@
       <ProductSchema v-if="!error" :description="`Hochwertige Widerstandsbänder für ${route.params.slug}`" />
       
       <main class="min-h-screen">
-        <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <header class="bg-gradient-to-r from-gray-200 to-gray-600 text-white py-16">
           <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">
               {{ loading ? 'Laden...' : error ? 'Fehler' : pageContent.title }}
@@ -24,17 +24,10 @@
         </header>
   
         <article v-if="!error" class="py-12">
-          <div class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
-            <div v-if="pageContent.images?.length" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <img 
-                v-for="image in pageContent.images" 
-                :key="image.url"
-                :src="image.url"
-                :alt="image.alt"
-                class="rounded-lg shadow-md"
-              />
-            </div>
-            <div v-html="pageContent.content"></div>
+          <div 
+           v-if="pageContent.content?.length"
+          class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
+            <ContentSection :contentArray="pageContent.content" />
           </div>
         </article>
   
@@ -60,7 +53,7 @@ import type { PageContent } from '~/utils/types'
   const pageContent = ref<PageContent>({
     title: '',
     subtitle: '',
-    content: '',
+    content: [],
     images: [],
     faqs: []
   })

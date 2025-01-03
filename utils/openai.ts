@@ -3,9 +3,10 @@ import { contentPrompts } from './prompts/contentPrompts';
 import { targetGroups } from './content/targetGroups';
 import OpenAI from 'openai';
 
-export async function generateContent(targetGroup: string, key: string): Promise<string> {
+export async function generateContent(targetGroup: string, key: string): Promise<Content[]> {
 
     const openai = new OpenAI({
+        dangerouslyAllowBrowser: true,
         apiKey: key
       });
 
@@ -32,16 +33,18 @@ export async function generateContent(targetGroup: string, key: string): Promise
       temperature: 0.7
     });
 
-    return response.choices[0].message.content || '';
+    const content = response.choices[0].message.content || '[]';
+    return JSON.parse(content) as Content[];
   } catch (error) {
     console.error('Error generating content:', error);
-    return 'Inhalt wird geladen...';
+    return [];
   }
 }
 
 export async function generateFAQs(targetGroup: string, key: string): Promise<FAQ[]> {
 
     const openai = new OpenAI({
+        dangerouslyAllowBrowser: true,
         apiKey: key
       });
 

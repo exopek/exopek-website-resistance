@@ -9,11 +9,12 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@nuxtjs/seo',
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    'vue3-carousel-nuxt'
   ],
-
   runtimeConfig: {
+    public: {
     openaiApiKey: process.env.OPENAI_API_KEY,
     pixabayApiKey: process.env.PIXABAY_API_KEY
-  }
+  }}
 })
