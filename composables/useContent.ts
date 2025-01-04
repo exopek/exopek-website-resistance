@@ -14,7 +14,7 @@ export function useContent() {
     error.value = null;
 
     try {
-      const [content, faqs, images] = await Promise.all([
+      const [content, faqs] = await Promise.all([
         generateContent(targetGroup, config.public.openaiApiKey),
         generateFAQs(targetGroup, config.public.openaiApiKey),
         []
@@ -23,9 +23,8 @@ export function useContent() {
       return {
         title: `Widerstandsbänder für ${targetGroup}`,
         subtitle: 'Optimale Unterstützung für Ihr Training',
-        content,
-        faqs,
-        images
+        mainContent: content,
+        faqContent: faqs
       };
     } catch (e) {
       error.value = 'Fehler beim Laden der Inhalte';

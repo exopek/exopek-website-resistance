@@ -12,10 +12,10 @@
         <header class="bg-gradient-to-r from-gray-200 to-gray-600 text-white py-16">
           <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              {{ loading ? 'Laden...' : error ? 'Fehler' : pageContent.title }}
+              {{ loading ? 'Laden...' : error ? 'Fehler' : pageContent?.title }}
             </h1>
             <p v-if="!error" class="text-xl md:text-2xl">
-              {{ pageContent.subtitle }}
+              {{ pageContent?.subtitle }}
             </p>
             <p v-else class="text-xl md:text-2xl text-red-300">
               {{ error }}
@@ -23,17 +23,17 @@
           </div>
         </header>
   
-        <article v-if="!error && pageContent.content?.length" class="py-12">
+        <article v-if="!error && pageContent?.mainContent?.length" class="py-12">
           <div
           class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
-            <ContentSection :contentArray="pageContent.content" />
+            <ContentSection :contentArray="pageContent?.mainContent" />
           </div>
         </article>
   
         <FAQSection 
-          v-if="!error && pageContent.faqs?.length"
+          v-if="!error && pageContent?.faqContent?.length"
           :target-group="route.params.slug?.toString()"
-          :faqs="pageContent.faqs"
+          :faqs="pageContent?.faqContent"
         />
       </main>
     </div>
@@ -42,24 +42,20 @@
   <script setup lang="ts">
 import { useCategories } from '~/composables/useCategories'
 import { useContent } from '~/composables/useContent'
+import { useSeoPageContentStore } from '~/store/seoPageContent'
 import type { PageContent } from '~/utils/types'
 
   
   const route = useRoute()
   const config = useRuntimeConfig()
-  const { generatePageContent, loading, error } = useContent()
-  
-  const pageContent = ref<PageContent>({
-    title: '',
-    subtitle: '',
-    content: [],
-    images: [],
-    faqs: []
-  })
+  // const { generatePageContent, loading, error } = useContent()
+  const seoPageContentStore = useSeoPageContentStore()
+  const { content: pageContent, loading, error } = storeToRefs(seoPageContentStore)
+  const fetchSeoPageContent = seoPageContentStore.fetchSeoPageContent
   
   onMounted(async () => {
     try {
-      pageContent.value = await generatePageContent(route.params.slug as string)
+      pageContent.value = await fetchSeoPageContent(route.params.slug as string)
       console.log('Loaded page content:', pageContent.value);
     } catch (e) {
       console.error('Error loading page content:', e)
