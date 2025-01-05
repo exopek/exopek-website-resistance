@@ -9,7 +9,7 @@
       <ProductSchema v-if="!error" :description="`Hochwertige Widerstandsbänder für ${route.params.slug}`" />
       
       <main class="min-h-screen">
-        <div class="flex justify-center m-2">
+        <div class="flex justify-center shadow-lg m-2 pb-2">
           <img src="https://exopek.de/wp-content/uploads/2023/08/Bildmarke-Schwarz.png" alt="Logo Clean" height="40" width="40">
           <div class="flex justify-center gap-10 md:gap-20 w-3/4">
             <a href="https://exopek.de/shop-3/">
@@ -26,12 +26,12 @@
           </a>
           </div>
         </div>
-        <header class="bg-gradient-to-r from-gray-200 to-gray-600 text-white py-16">
+        <header class="flex justify-center text-black pt-8 md:pt-16">
           <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">
-              {{ loading ? 'Laden...' : error ? 'Fehler' : pageContent?.title }}
+            <h1 class="text-4xl md:text-6xl font-bold mb-2">
+              {{ loading ? '' : error ? 'Fehler' : pageContent?.title }}
             </h1>
-            <p v-if="!error" class="text-xl md:text-2xl">
+            <p v-if="!error" class="flex justify-center text-xl md:text-2xl">
               {{ pageContent?.subtitle }}
             </p>
             <p v-else class="text-xl md:text-2xl text-red-300">
@@ -40,7 +40,11 @@
           </div>
         </header>
   
-        <article v-if="!error && pageContent?.mainContent?.length" class="py-12">
+        <article v-if="!error && pageContent?.mainContent?.length" class="py-8 md:py-16">
+          <div class="px-4">
+            <FitnessBandsSection/>
+          </div>
+          
           <div
           class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
             <ContentSection :contentArray="pageContent?.mainContent" />

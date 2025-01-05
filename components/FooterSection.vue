@@ -103,7 +103,7 @@
       <div class="text-sm mb-2">
         Copyright © 2025 EXOPEK GmbH. Alle Rechte vorbehalten.
       </div>
-      <div class="flex grid-cols-2 md:grid-cols-1 justify-between space-x-4 mb-4">
+      <div class="flex flex-wrap justify-center md:justify-between gap-2 md:gap-4 mb-4">
         <a href="https://exopek.de/rechtsabteilung/datenschutzrichtlinie/" class="text-gray-500">Datenschutzerklärung</a>
         <p>|</p>
         <a href="https://exopek.de/rechtsabteilung/nutzungsbedingungen/" class="text-gray-500">Nutzungsbedingungen</a>
