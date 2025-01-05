@@ -18,13 +18,6 @@ const products = ref([
         price: "ab 295.00",
     },
     {
-        title: 'Manschetten',
-        description: '5er Set für alle Fitnesslevel',
-        image: 'https://exopek.de/wp-content/uploads/2023/06/Manschetten.jpg',
-        shopUrl: 'https://exopek.de/produkt/widerstandsbaender-arme/',
-        price: "-"
-    },
-    {
         title: 'Widerstandsbänder für die Arme',
         description: 'Einzeln oder im Set erhältlich',
         image: 'https://exopek.de/wp-content/uploads/2024/01/Widerstandsbaender.jpg',
@@ -37,13 +30,6 @@ const products = ref([
         image: 'https://exopek.de/wp-content/uploads/2024/01/Widerstandsbaender.jpg',
         shopUrl: 'https://exopek.de/produkt/widerstandsbaender-beine/',
         price: "ab 16.00"
-    },
-    {
-        title: 'Widerstandsbänder Griffe',
-        description: 'Für noch mehr Trainingsmöglichkeiten',
-        image: 'https://exopek.de/wp-content/uploads/2023/06/Griffe.jpg',
-        shopUrl: 'https://exopek.de/produkt/widerstandsbaender-arme/',
-        price: "-"
     }
 ])
 </script>

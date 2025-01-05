@@ -1,12 +1,12 @@
 <template>
     <div>
       <MetaTags v-if="!error"
-        :title="`Widerstandsbänder für ${route.params.slug} | Exopek`"
-        :description="`Entdecken Sie unsere speziellen Widerstandsbänder für ${route.params.slug}. Optimale Unterstützung für Ihr Training.`"
-        :keywords="`Widerstandsbänder ${route.params.slug}, Fitnessbänder, Training`"
-        :url="`${config.public.siteUrl}/kategorie/${route.params.slug}`"
+        :title="`Widerstandsbänder für ${category.title} | Exopek`"
+        :description="`Entdecken Sie unsere speziellen Widerstandsbänder für ${category.title}. Optimale Unterstützung für Ihr Training.`"
+        :keywords="`Widerstandsbänder ${category.title}, Fitnessbänder, Training`"
+        :url="`${config.public.siteUrl}/${route.params.slug}`"
       />
-      <ProductSchema v-if="!error" :description="`Hochwertige Widerstandsbänder für ${route.params.slug}`" />
+      <ProductSchema v-if="!error" :description="`Hochwertige Widerstandsbänder für ${category.title}`" />
       
       <main class="min-h-screen">
         <div class="flex justify-center shadow-lg m-2 pb-2">
@@ -26,10 +26,16 @@
           </a>
           </div>
         </div>
+        <div class="px-10 pt-10">
+          <Breadcrumb :breadcrumbs="[
+          { text: 'Startseite', to: '/' },
+          { text: category.title, to: `/${category.slug}` }
+        ]"/>
+        </div>
         <header class="flex justify-center text-black pt-8 md:pt-16">
           <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-2">
-              {{ loading ? '' : error ? 'Fehler' : pageContent?.title }}
+              {{ loading ? '' : error ? 'Fehler' : `Widerstandsbänder für ${category.title}` }}
             </h1>
             <p v-if="!error" class="flex justify-center text-xl md:text-2xl">
               {{ pageContent?.subtitle }}
@@ -64,11 +70,10 @@
   </template>
   
   <script setup lang="ts">
-import { useCategories } from '~/composables/useCategories'
-import { useContent } from '~/composables/useContent'
-import { useSeoPageContentStore } from '~/store/seoPageContent'
-import type { PageContent } from '~/utils/types'
-
+  import { useCategories } from '~/composables/useCategories'
+  import { useContent } from '~/composables/useContent'
+  import { useSeoPageContentStore } from '~/store/seoPageContent'
+  import type { PageContent } from '~/utils/types'
   
   const route = useRoute()
   const config = useRuntimeConfig()
@@ -90,6 +95,10 @@ import type { PageContent } from '~/utils/types'
   const { categories } = useCategories()
   const validCategory = computed(() => 
     categories.value.some((category: { slug: any }) => category.slug === route.params.slug)
+  )
+
+  const category = computed(() => 
+    categories.value.find((category: { slug: any }) => category.slug === route.params.slug) || {"slug": "error", "title": "error"}
   )
   
   // Redirect to home if category doesn't exist
