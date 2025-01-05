@@ -9,6 +9,23 @@
       <ProductSchema v-if="!error" :description="`Hochwertige Widerstandsbänder für ${route.params.slug}`" />
       
       <main class="min-h-screen">
+        <div class="flex justify-center m-2">
+          <img src="https://exopek.de/wp-content/uploads/2023/08/Bildmarke-Schwarz.png" alt="Logo Clean" height="40" width="40">
+          <div class="flex justify-center gap-10 md:gap-20 w-3/4">
+            <a href="https://exopek.de/shop-3/">
+            Shop
+          </a>
+          <a href="https://exopek.de/exopek/">
+            EXOPEK Pro
+          </a>
+          <a href="https://exopek.de/workouts/">
+            Workouts
+          </a>
+          <a href="https://exopek.de/app-2/">
+            App
+          </a>
+          </div>
+        </div>
         <header class="bg-gradient-to-r from-gray-200 to-gray-600 text-white py-16">
           <div class="max-w-7xl mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -35,7 +52,10 @@
           :target-group="route.params.slug?.toString()"
           :faqs="pageContent?.faqContent"
         />
+        <FooterSection/>
+        
       </main>
+      
     </div>
   </template>
   

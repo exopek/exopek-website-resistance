@@ -16,5 +16,15 @@ export default defineNuxtConfig({
     public: {
     openaiApiKey: process.env.OPENAI_API_KEY,
     pixabayApiKey: process.env.PIXABAY_API_KEY
-  }}
+  }},
+  sitemap: {
+    urls: async () => {
+      const dynamicRoutes = ['senioren', 'fitness-einsteiger', 'kraftsportler', 'yoga', 'outdoor-fitness']
+      return dynamicRoutes.map(route => ({
+        changefreq: 'daily',
+        priority: 0.8,
+        loc: `https://fitnessband.exopek.de/${route}`
+      }))
+    }
+  }
 })
