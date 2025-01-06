@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ['assets/css/tailwind.css'],
   ssr: true,
   nitro: {
-    preset: 'azure'
+    preset: 'node-server'
   },
   modules: [
     '@nuxtjs/sitemap',
