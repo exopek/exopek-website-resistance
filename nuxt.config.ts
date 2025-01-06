@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['assets/css/tailwind.css'],
   ssr: true,
+  nitro: {
+    preset: 'azure'
+  },
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
