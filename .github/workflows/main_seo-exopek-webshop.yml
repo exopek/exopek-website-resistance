@@ -28,28 +28,28 @@ jobs:
           yarn build --if-present
 
       - name: Debug build output
-       run: |
-         echo "Current directory structure:"
-         ls -la
-         echo ".output directory:"
-         ls -la .output/
-         echo ".output/server directory:"
-         ls -la .output/server/
+        run: |
+          echo "Current directory structure:"
+          ls -la
+          echo ".output directory:"
+          ls -la .output/
+          echo ".output/server directory:"
+          ls -la .output/server/
 
       - name: Prepare deployment package
-       run: |
-         cd .output
-         echo '{
-           "scripts": {
-             "start": "node server/index.mjs"
-           }
-         }' > package.json
-         echo "Content to be zipped:"
-         ls -la
-         zip -r ../release.zip ./*
-         cd ..
-         echo "Final package size:"
-         ls -la release.zip
+        run: |
+          cd .output
+          echo '{
+            "scripts": {
+              "start": "node server/index.mjs"
+            }
+          }' > package.json
+          echo "Content to be zipped:"
+          ls -la
+          zip -r ../release.zip ./*
+          cd ..
+          echo "Final package size:"
+          ls -la release.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -73,18 +73,18 @@ jobs:
           name: node-app
 
       - name: Debug downloaded artifact
-       run: |
-         echo "Downloaded artifact:"
-         ls -la
+        run: |
+          echo "Downloaded artifact:"
+          ls -la
 
       - name: Unzip artifact for deployment
-       run: |
-         mkdir app
-         unzip release.zip -d app
-         echo "Deployment package content:"
-         ls -la app/
-         echo "Server directory content:"
-         ls -la app/server/
+        run: |
+          mkdir app
+          unzip release.zip -d app
+          echo "Deployment package content:"
+          ls -la app/
+          echo "Server directory content:"
+          ls -la app/server/
       
       - name: Login to Azure
         uses: azure/login@v2
