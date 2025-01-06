@@ -22,13 +22,34 @@ jobs:
           node-version: '18.x'
           cache: 'yarn'
 
-      - name: npm install, build, and test
+      - name: yarn install, build
         run: |
           yarn install
           yarn build --if-present
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+      - name: Debug build output
+       run: |
+         echo "Current directory structure:"
+         ls -la
+         echo ".output directory:"
+         ls -la .output/
+         echo ".output/server directory:"
+         ls -la .output/server/
+
+      - name: Prepare deployment package
+       run: |
+         cd .output
+         echo '{
+           "scripts": {
+             "start": "node server/index.mjs"
+           }
+         }' > package.json
+         echo "Content to be zipped:"
+         ls -la
+         zip -r ../release.zip ./*
+         cd ..
+         echo "Final package size:"
+         ls -la release.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -51,8 +72,19 @@ jobs:
         with:
           name: node-app
 
+      - name: Debug downloaded artifact
+       run: |
+         echo "Downloaded artifact:"
+         ls -la
+
       - name: Unzip artifact for deployment
-        run: unzip release.zip
+       run: |
+         mkdir app
+         unzip release.zip -d app
+         echo "Deployment package content:"
+         ls -la app/
+         echo "Server directory content:"
+         ls -la app/server/
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -67,5 +99,6 @@ jobs:
         with:
           app-name: 'seo-exopek-webshop'
           slot-name: 'Production'
-          package: .
+          package: app
+          start-up-command: 'node server/index.mjs'
           
