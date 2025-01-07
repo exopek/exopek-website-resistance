@@ -2,6 +2,21 @@ import { ref } from "vue";
 import type { Category } from "~/types/navigation";
 
 export function useCategories() {
+  // For 150 categories, seo relevant
+      /* Basketball
+      Handball 
+      Volleyball
+      Fußball 
+      American Football
+      Rugby
+      Muay Thai
+      Boxen
+      Crossfit
+      Hyrox
+      Calistenics
+      Home-Training
+      Platzsparend Zuhause trainieren
+      Sprungkraft trainieren */
   const categories = ref<Category[]>([
     {
       slug: "senioren",
@@ -101,6 +116,120 @@ export function useCategories() {
         slug: 'kampfsportler', 
         title: 'Kampfsportler', 
         description: 'Widerstandsbänder zur Verbesserung von Schnelligkeit und Explosivität' 
+    },
+    
+    // Ball Sports
+    {
+      slug: "basketball",
+      title: "Basketball",
+      description: "Widerstandsbänder für explosive Sprungkraft und verbesserte Wurfkraft im Basketball",
+    },
+    {
+      slug: "handball",
+      title: "Handball",
+      description: "Spezielle Übungen für Wurftechnik und Schultermuskulatur im Handball",
+    },
+    {
+      slug: "volleyball",
+      title: "Volleyball",
+      description: "Training für Sprungkraft und Armstabilität beim Volleyball",
+    },
+    {
+      slug: "fussball",
+      title: "Fußball",
+      description: "Widerstandsband-Training für Schusskraft und Schnelligkeit im Fußball",
+    },
+    {
+      slug: "american-football",
+      title: "American Football",
+      description: "Krafttraining mit Widerstandsbändern für Football-spezifische Bewegungen",
+    },
+    {
+      slug: "rugby",
+      title: "Rugby",
+      description: "Explosivkraft und Tacklingvorbereitung mit Widerstandsbändern",
+    },
+  
+    // Combat Sports
+    {
+      slug: "muay-thai",
+      title: "Muay Thai",
+      description: "Widerstandsbänder für explosive Kicks und Schlagtechniken im Muay Thai",
+    },
+    {
+      slug: "boxen",
+      title: "Boxen",
+      description: "Spezifisches Widerstandstraining für Schlagkraft und Boxbewegungen",
+    },
+    {
+      slug: "mma",
+      title: "MMA",
+      description: "Vielseitiges Widerstandstraining für Mixed Martial Arts",
+    },
+  
+    // Fitness & Training
+    {
+      slug: "hyrox",
+      title: "HYROX",
+      description: "Spezifische Widerstandsübungen für HYROX-Wettkampfvorbereitung",
+    },
+    {
+      slug: "calisthenics",
+      title: "Calisthenics",
+      description: "Unterstützung und Progression bei Körpergewichtsübungen",
+    },
+    {
+      slug: "functional-training",
+      title: "Functional Training",
+      description: "Funktionelles Training mit Widerstandsbändern für Alltag und Sport",
+    },
+  
+    // Special Training Types
+    {
+      slug: "sprungkrafttraining",
+      title: "Sprungkrafttraining",
+      description: "Gezieltes Training zur Steigerung der vertikalen Sprungkraft",
+    },
+    {
+      slug: "beweglichkeitstraining",
+      title: "Beweglichkeitstraining",
+      description: "Verbesserung der Mobilität und Flexibilität mit Widerstandsbändern",
+    },
+    {
+      slug: "core-training",
+      title: "Core Training",
+      description: "Stabilisationsübungen für eine starke Körpermitte",
+    },
+  
+    // Space-Saving Solutions
+    {
+      slug: "platzsparend",
+      title: "Platzsparendes Training",
+      description: "Effektives Training auf kleinstem Raum mit Widerstandsbändern",
+    },
+    {
+      slug: "mobile-fitness",
+      title: "Mobiles Training",
+      description: "Flexible Trainingsmöglichkeiten für unterwegs und auf Reisen",
+    },
+  
+    // Professional Applications
+    {
+      slug: "athletik-training",
+      title: "Athletik Training",
+      description: "Professionelles Athletiktraining mit Widerstandsbändern",
+    },
+    {
+      slug: "leichtathletik",
+      title: "Leichtathletik",
+      description: "Spezifisches Training für Sprinter, Werfer und Springer",
+    },
+  
+    // Health & Prevention
+    {
+      slug: "gelenkschonend",
+      title: "Gelenkschonendes Training",
+      description: "Sanftes Training für schmerzfreie Bewegung",
     }
   ]);
 

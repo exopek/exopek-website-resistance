@@ -13,9 +13,8 @@ export interface FAQ {
   export interface PageContent {
     title: string;
     subtitle: string;
-    content: Content[];
-    images: Image[];
-    faqs: FAQ[];
+    mainContent: Content[];
+    faqContent: FAQ[];
   }
 
   export interface TargetGroup {

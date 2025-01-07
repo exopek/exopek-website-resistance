@@ -11,7 +11,7 @@
       <main class="min-h-screen">
         <div class="flex justify-center shadow-lg m-2 pb-2">
           <img src="https://exopek.de/wp-content/uploads/2023/08/Bildmarke-Schwarz.png" alt="Logo Clean" height="40" width="40">
-          <div class="flex justify-center gap-10 md:gap-20 w-3/4">
+          <div class="flex justify-center gap-3 md:gap-20 w-3/4">
             <a href="https://exopek.de/shop-3/">
             Shop
           </a>

@@ -22,7 +22,11 @@ export default defineNuxtConfig({
   }},
   sitemap: {
     urls: async () => {
-      const dynamicRoutes = ['senioren', 'fitness-einsteiger', 'kraftsportler', 'yoga', 'outdoor-fitness']
+      const dynamicRoutes = ['senioren', 'fitness-einsteiger', 'kraftsportler', 'yoga', 'outdoor-fitness', 'physiotherapie', 'crossfit', 'heimtraining', 'reisen', 'rehabilitation', 'büroangestellte',
+        'pilates', 'teamsportler', 'personal-trainer', 'ausdauertraining', 'seniorensportgruppen', 'rehabilitationszentren', 'leistungssportler', 'kampfsportler', 'basketball', 'handball', 'volleyball',
+        'fussball', 'american-football', 'rugby', 'muay-thai', 'boxen', 'mma', 'hyrox', 'calisthenics', 'functional-training', 'sprungkrafttraining', 'beweglichkeitstraining', 'core-training',
+        'platzsparend', 'mobile-fitness', 'athletik-training', 'leichtathletik', 'gelenkschonend' 
+      ]
       return dynamicRoutes.map(route => ({
         changefreq: 'daily',
         priority: 0.8,

@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <Carousel :itemsToShow="2" :autoplay="3000" :mouseDrag="true" :touchDrag="true" :transition="500" :wrap-around="true">
+        <Carousel :itemsToShow=itemsToShow :autoplay="3000" :mouseDrag="true" :touchDrag="true" :transition="500" :wrap-around="true">
             <Slide v-for="(product, index) in products" :key="index">
                 <ProductCard :product="product" />
             </Slide>
@@ -9,6 +9,11 @@
     </div>    
 </template>
 <script setup>
+
+import { useWindowSize } from '@vueuse/core'
+
+const { width, height } = useWindowSize()
+
 const products = ref([
     {
         title: 'EXOPEK Pro',
@@ -32,4 +37,17 @@ const products = ref([
         price: "ab 16.00"
     }
 ])
+
+const itemsToShow = computed(() => {
+    if (width.value < 768) {
+        return 1
+    } else if (width.value < 1024) {
+        return 2
+    } else {
+        return 2
+    }
+})
+
+
+
 </script>
