@@ -22,12 +22,5 @@ jobs:
           password: ${{ secrets.REGISTRY_PASSWORD }}
      
      - run: |
-          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/exopek-shop:latest
-          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/exopek-shop:latest
-
-     - name: Build the frontend image and push it to ACR
-       uses: docker/build-push-action@v5
-       with:
-          push: true
-          tags: ${{ secrets.REGISTRY_LOGIN_SERVER }}/exopek-webshop:latest
-          file: dockerfile
+          docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/exopek-webshop:latest
+          docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/exopek-webshop:latest
