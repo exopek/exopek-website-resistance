@@ -101,7 +101,7 @@
     categories.value.find((category: { slug: any }) => category.slug === route.params.slug) || {"slug": "error", "title": "error"}
   )
   
-  // Redirect to home if category doesn't exist
+  // Redirect to home if category doesn't exist fcg
   if (!validCategory.value) {
     navigateTo('/')
   }
