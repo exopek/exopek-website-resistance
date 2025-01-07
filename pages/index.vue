@@ -18,7 +18,7 @@
           height="40"
           width="40"
         />
-        <div class="flex justify-center gap-10 md:gap-20 w-3/4">
+        <div class="flex justify-center gap-3 md:gap-20 w-3/4">
           <a href="https://exopek.de/shop-3/"> Shop </a>
           <a href="https://exopek.de/exopek/"> EXOPEK Pro </a>
           <a href="https://exopek.de/workouts/"> Workouts </a>
