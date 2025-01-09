@@ -128,7 +128,7 @@ const category = computed(
     ) || { slug: "error", title: "error" }
 );
 
-// Redirect to home if category doesn't exist fcg
+// Redirect to home if category doesn't exist fcg shjdfb
 if (!validCategory.value) {
   navigateTo("/");
 }
