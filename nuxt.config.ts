@@ -4,6 +4,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['assets/css/tailwind.css'],
   ssr: true,
+  app: {
+    head: {
+      title: 'Fitnessband Übungen',
+      htmlAttrs: { lang: 'de' },
+      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
+  },
   nitro: {
     preset: 'node-server'
   },

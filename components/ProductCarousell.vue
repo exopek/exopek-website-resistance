@@ -25,14 +25,14 @@ const products = ref([
     {
         title: 'Widerstandsbänder für die Arme',
         description: 'Einzeln oder im Set erhältlich',
-        image: 'https://exopek.de/wp-content/uploads/2024/01/Widerstandsbaender.jpg',
+        image: 'https://exopek.de/wp-content/uploads/2024/05/set-widerstandsbaender-in-verschiedenen-staerken.jpg',
         shopUrl: 'https://exopek.de/produkt/widerstandsbaender-arme/',
         price: "ab 14.00"
     },
     {
         title: 'Widerstandsbänder für die Beine',
         description: 'Einzeln oder im Set erhältlich',
-        image: 'https://exopek.de/wp-content/uploads/2024/01/Widerstandsbaender.jpg',
+        image: 'https://exopek.de/wp-content/uploads/2024/05/set-widerstandsbaender-in-verschiedenen-staerken.jpg',
         shopUrl: 'https://exopek.de/produkt/widerstandsbaender-beine/',
         price: "ab 16.00"
     }

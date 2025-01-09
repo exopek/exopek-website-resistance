@@ -7,6 +7,7 @@
       <Meta property="og:description" :content="description" />
       <Meta property="og:type" content="website" />
       <Meta property="og:url" :content="url" />
+      <Meta name="language" content="German" />
       <Link rel="canonical" :href="url" />
     </Head>
   </template>
