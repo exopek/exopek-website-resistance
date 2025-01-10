@@ -200,6 +200,11 @@ export function useCategories() {
       title: "Core Training",
       description: "Stabilisationsübungen für eine starke Körpermitte",
     },
+    {
+      slug: "klimmzüge",
+      title: "Klimmzüge",
+      description: "Unterstützung und Progression bei Klimmzügen mit Widerstandsbändern",
+    },
   
     // Space-Saving Solutions
     {

@@ -33,7 +33,7 @@ export default defineNuxtConfig({
       const dynamicRoutes = ['senioren', 'fitness-einsteiger', 'kraftsportler', 'yoga', 'outdoor-fitness', 'physiotherapie', 'crossfit', 'heimtraining', 'reisen', 'rehabilitation', 'büroangestellte',
         'pilates', 'teamsportler', 'personal-trainer', 'ausdauertraining', 'seniorensportgruppen', 'rehabilitationszentren', 'leistungssportler', 'kampfsportler', 'basketball', 'handball', 'volleyball',
         'fussball', 'american-football', 'rugby', 'muay-thai', 'boxen', 'mma', 'hyrox', 'calisthenics', 'functional-training', 'sprungkrafttraining', 'beweglichkeitstraining', 'core-training',
-        'platzsparend', 'mobile-fitness', 'athletik-training', 'leichtathletik', 'gelenkschonend' 
+        'platzsparend', 'mobile-fitness', 'athletik-training', 'leichtathletik', 'gelenkschonend', 'klimmzüge' 
       ]
       return dynamicRoutes.map(route => ({
         changefreq: 'daily',

@@ -2,7 +2,7 @@
   <div>
     <MetaTags
       v-if="!error"
-      :title="`Widerstandsbänder für ${category.title} | Exopek`"
+      :title="`Widerstandsbänder für ${category.title} | EXOPEK`"
       :description="`Entdecken Sie unsere speziellen Widerstandsbänder für ${category.title}. Optimale Unterstützung für Ihr Training`"
       :keywords="`Widerstandsbänder ${category.title}, Fitnessbänder, Training`"
       :url="`https://fitnessband.exopek.de/${route.params.slug}`"
