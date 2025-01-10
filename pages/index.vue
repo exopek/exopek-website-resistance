@@ -45,7 +45,24 @@
       </header>
 
       <section class="py-12">
+        
         <div class="max-w-7xl mx-auto px-4">
+          <ProductCarousell></ProductCarousell>
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Widerstandsbänder: Der ultimative Trainingsbegleiter für effektives Krafttraining</h2>
+            <p class="text-gray-600">
+              Widerstandsbänder sind die perfekte Ergänzung für Dein Training. Egal ob Du Anfänger oder Profi bist, die Fitnessbänder von Exopek bieten
+              Dir die optimale Unterstützung für Dein Training. Entdecke jetzt die vielfältigen Einsatzmöglichkeiten und profitiere von den Vorteilen
+              der Widerstandsbänder.
+            </p>
+            <h3 class="text-xl font-bold mt-8 mb-4">Warum Widerstandsbänder die beste Wahl für Dein Training sind</h3>
+            <p class="text-gray-600">
+              Widerstandsbänder sind vielseitig einsetzbar und eignen sich für alle Fitnesslevel. Egal ob Du Deine Muskeln aufbauen, Deine Ausdauer
+              verbessern oder Deine Beweglichkeit steigern möchtest, die Fitnessbänder von Exopek sind die perfekte Wahl. Die Widerstandsbänder
+              ermöglichen ein effektives Training zuhause oder unterwegs und bieten Dir die Möglichkeit, Dein Training individuell zu gestalten.
+            </p>
+            <FitnessBandsSection />
+          </div>
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <NuxtLink
               v-for="category in categories.slice(0, value)"
@@ -62,7 +79,7 @@
         </div>
         
       </section>
-      <div class="w-full flex justify-center" v-on:click="loadMore">
+      <div class="w-full flex justify-center pb-10" v-on:click="loadMore">
   <div class="inline-flex rounded-md bg-slate-900 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
     <span class="px-4 py-2.5 text-center text-sm font-medium text-white">
       Weitere laden
