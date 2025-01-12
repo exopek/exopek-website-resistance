@@ -1,6 +1,6 @@
 <template>
   <section class="flex flex-col items-center py-12">
-    <div class="flex flex-col md:flex-row items-center max-w-4xl mx-auto">
+    <div class="flex flex-col md:flex-row items-center max-w-7xl mx-auto">
       <div class="md:w-1/2 p-4">
         <h2 class="text-3xl font-bold mb-4">
           Widerstandsbänder: Die kompakte Lösung für effektives Training überall

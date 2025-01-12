@@ -68,8 +68,11 @@
             <div class="px-4">
               <FitnessBandsSection />
             </div>
+            <div class="px-4">
+              <ResistanceBandsBenefits />
+            </div>
 
-            <div class="max-w-4xl mx-auto px-4 prose lg:prose-xl">
+            <div class="px-4 prose lg:prose-xl">
               <ContentSection :contentArray="pageContent?.mainContent" />
             </div>
           </article>

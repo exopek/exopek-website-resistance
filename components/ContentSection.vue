@@ -1,5 +1,5 @@
 <template> 
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-7xl mx-auto">
     <h2 class="text-xl font-semibold mb-2">{{ firstContent.title }}</h2>
     <p class="text-gray-600 space-y-6">{{ firstContent.content }}</p>
     <ProductCarousell></ProductCarousell>

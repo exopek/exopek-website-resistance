@@ -16,16 +16,17 @@ useHead({
       children: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Product',
-        name: 'Exopek Widerstandsbänder',
+        name: 'EXOPEK Widerstandsbänder',
         description: props.description,
+        image: 'https://exopek.de/wp-content/uploads/2024/05/zehn-widerstandsbaender-sicher-fixiert.jpg',
         brand: {
           '@type': 'Brand',
-          name: 'Exopek'
+          name: 'EXOPEK'
         },
         offers: {
           '@type': 'Offer',
           availability: 'https://schema.org/InStock',
-          price: '29.99',
+          price: '295.00',
           priceCurrency: 'EUR'
         }
       })
