@@ -263,6 +263,181 @@ export function useCategories() {
       slug: "beste-widerstandsbaender-online-kaufen",
       title: "Beste Widerstandsbänder",
       description: "Widerstandsbänder zu top Preisen",
+    },
+    {
+      slug: "widerstandsbaender-sets-alles-in-einem",
+      title: "Widerstandsbänder Sets",
+      description: "Alles-in-einem Sets für effektives Training",
+    },
+    {
+      slug: "widerstandsbaender-home-fitness",
+      title: "Widerstandsbänder Home Fitness",
+      description: "Effektives Training für Zuhause",
+    },
+    {
+      slug: "widerstandsbaender-mobil-und-vielseitig",
+      title: "Widerstandsbänder Mobil",
+      description: "Vielseitiges Training für unterwegs",
+    },
+    {
+      slug: "widerstandsbaender-high-performance-athleten",
+      title: "Widerstandsbänder Athleten",
+      description: "Hochwertige Bänder für Leistungssportler",
+    },
+    {
+      slug: "widerstandsbaender-cardio-und-kraft",
+      title: "Widerstandsbänder Cardio",
+      description: "Kombiniertes Training für Kraft und Ausdauer",
+    },
+    {
+      slug: "widerstandsbaender-yoga-und-pilates",
+      title: "Widerstandsbänder Yoga",
+      description: "Flexibles Training für Yoga und Pilates",
+    },
+    {
+      slug: "widerstandsbaender-crossfit-training",
+      title: "Widerstandsbänder CrossFit",
+      description: "Intensives Training für CrossFit-Workouts",
+    },
+    {
+      slug: "widerstandsbaender-booty-workouts",
+      title: "Widerstandsbänder Booty",
+      description: "Effektives Training für den Po",
+    },
+    {
+      slug: "widerstandsbaender-fuer-funktionssport",
+      title: "Widerstandsbänder Funktionssport",
+      description: "Funktionelles Training für Sportler",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-muskelaufbau",
+      title: "Widerstandsband Sets Muskelaufbau",
+      description: "Sets für gezielten Muskelaufbau",
+    },
+    {
+      slug: "widerstandsband-sets-reha-und-fitness",
+      title: "Widerstandsband Sets Reha",
+      description: "Sets für Rehabilitation und Fitness",
+    },
+    {
+      slug: "widerstandsband-sets-home-fitness",
+      title: "Widerstandsband Sets Home Fitness",
+      description: "Sets für effektives Training zu Hause",
+    },
+    {
+      slug: "premium-widerstandsband-sets",
+      title: "Premium Widerstandsband Sets",
+      description: "Hochwertige Sets für anspruchsvolle Trainingsanforderungen",
+    },
+    {
+      slug: "widerstandsband-sets-cardio-und-kraft",
+      title: "Widerstandsband Sets Cardio",
+      description: "Kombinierte Sets für Kraft und Ausdauer",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-funktionssport",
+      title: "Widerstandsband Sets Funktionssport",
+      description: "Funktionelle Sets für Sportler",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-kleinwohnungen",
+      title: "Widerstandsband Sets Kleinwohnungen",
+      description: "Platzsparende Sets für kleine Wohnungen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-neubauwohnungen",
+      title: "Widerstandsband Sets Neubauwohnungen",
+      description: "Sets für effektives Training in Neubauwohnungen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-luxusfitness",
+      title: "Widerstandsband Sets Luxusfitness",
+      description: "Hochwertige Sets für luxuriöses Training",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-personal-trainer",
+      title: "Widerstandsband Sets Personal Trainer",
+      description: "Professionelle Sets für Personal Trainer",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-boutique-fitnessstudios",
+      title: "Widerstandsband Sets Boutique Fitnessstudios",
+      description: "Sets für exklusive Fitnessstudios",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-therapiezentren",
+      title: "Widerstandsband Sets Therapiezentren",
+      description: "Sets für therapeutische Anwendungen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-ambitionierte-sportler",
+      title: "Widerstandsband Sets Ambitionierte Sportler",
+      description: "Sets für leistungsorientierte Sportler",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-firmenfitness",
+      title: "Widerstandsband Sets Firmenfitness",
+      description: "Sets für betriebliche Gesundheitsförderung",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-luxusreisen",
+      title: "Widerstandsband Sets Luxusreisen",
+      description: "Sets für luxuriöse Reisen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-studioprofis",
+      title: "Widerstandsband Sets Studioprofis",
+      description: "Sets für professionelle Studios",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-exklusiven-kraftsport",
+      title: "Widerstandsband Sets Exklusiver Kraftsport",
+      description: "Sets für anspruchsvolle Kraftsportler",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-high-performance-athleten",
+      title: "Widerstandsband Sets High Performance Athleten",
+      description: "Sets für leistungsorientierte Athleten",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-yoga-und-pilates-studios",
+      title: "Widerstandsband Sets Yoga und Pilates Studios",
+      description: "Sets für professionelle Yoga- und Pilates-Studios",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-wellnesshotels",
+      title: "Widerstandsband Sets Wellnesshotels",
+      description: "Sets für exklusive Wellnesshotels",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-home-gym-luxus",
+      title: "Widerstandsband Sets Home Gym Luxus",
+      description: "Luxuriöse Sets für das Home Gym",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-physiotherapie-praxen",
+      title: "Widerstandsband Sets Physiotherapie Praxen",
+      description: "Sets für professionelle Physiotherapie-Praxen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-elite-sportvereine",
+      title: "Widerstandsband Sets Elite Sportvereine",
+      description: "Sets für professionelle Sportvereine",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-exklusive-kurhotels",
+      title: "Widerstandsband Sets Exklusive Kurhotels",
+      description: "Sets für luxuriöse Kurhotels",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-crossfit-boxen",
+      title: "Widerstandsband Sets CrossFit Boxen",
+      description: "Sets für professionelle CrossFit-Boxen",
+    },
+    {
+      slug: "widerstandsband-sets-fuer-luxus-gym-chains",
+      title: "Widerstandsband Sets Luxus Gym Chains",
+      description: "Sets für exklusive Fitnessketten",
     }
   ]);
 
