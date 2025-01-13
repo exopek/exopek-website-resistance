@@ -6,6 +6,7 @@
       :description="`${pageContent?.title}. Entdecken Sie unsere speziellen Widerstandsbänder für maximalen Erfolg im Training. ${pageContent?.subtitle}`"
       :keywords="`${pageContent?.title}, Fitnessbänder, Training, Widerstandsbänder, Resistance Bands, Fitness Bands, Widerstandsbänder kaufen, Widerstandsbänder Set, Fitnessband Set`"
       :url="`https://fitnessband.exopek.de/${route.params.slug}`"
+      :imageAlt="`Premium Widerstandsband Set - 10 Fitnessbänder mit Griffen und Manschetten.`"
     />
     <ProductSchema
       v-if="!error"

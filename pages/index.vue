@@ -5,6 +5,7 @@
       description="Entdecken Sie hochwertige Widerstandsbänder von EXOPEK für effektives Training zuhause. Ideal für alle Fitnesslevel und Trainingsarten."
       keywords="Widerstandsbänder, Fitnessbänder, Resistance Bands, Trainingsbänder Sets, Fitnessband Set, Widerstandsbänder kaufen"
       url="https://fitnessband.exopek.de"
+      :imageAlt="`Premium Widerstandsband Set - 10 Fitnessbänder mit Griffen und Manschetten.`"
     />
     <ProductSchema
       description="Hochwertige Widerstandsbänder für effektives Training"
