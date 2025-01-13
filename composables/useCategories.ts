@@ -242,6 +242,27 @@ export function useCategories() {
       slug: "premium-widerstandsbaender-high-performance",
       title: "Premium Widerstandsbänder",
       description: "Hochwertige Widerstandsbänder für anspruchsvolle Trainingsanforderungen",
+    },
+
+    // Travel & Outdoor
+    {
+      slug: "trendy-widerstandsbaender-multifunktional",
+      title: "Reise Widerstandsbänder",
+      description: "Leichte und kompakte Widerstandsbänder für Training unterwegs",
+    },
+
+    // Training Progress Problem Solution
+    {
+      slug: "widerstandsbaender-gegen-plateaus",
+      title: "Widerstandsbänder gegen Plateaus",
+      description: "Widerstandsbänder zur Überwindung von Trainingsplateaus",
+    },
+
+    // Sale
+    {
+      slug: "beste-widerstandsbaender-online-kaufen",
+      title: "Beste Widerstandsbänder",
+      description: "Widerstandsbänder zu top Preisen",
     }
   ]);
 
