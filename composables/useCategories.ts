@@ -235,6 +235,13 @@ export function useCategories() {
       slug: "gelenkschonend",
       title: "Gelenkschonendes Training",
       description: "Sanftes Training für schmerzfreie Bewegung",
+    },
+
+    // Premium Products Presentation
+    {
+      slug: "premium-widerstandsbaender-high-performance",
+      title: "Premium Widerstandsbänder",
+      description: "Hochwertige Widerstandsbänder für anspruchsvolle Trainingsanforderungen",
     }
   ]);
 

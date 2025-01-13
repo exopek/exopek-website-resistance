@@ -1,8 +1,8 @@
 <template>
   <div>
     <MetaTags
-      title="Exopek Widerstandsbänder - Professionelle Fitnessbänder für effektives Training"
-      description="Entdecken Sie hochwertige Widerstandsbänder von Exopek für effektives Training zuhause. Ideal für alle Fitnesslevel und Trainingsarten."
+      title="EXOPEK Widerstandsbänder - Professionelle Widerstandsbänder für effektives Training | EXOPEK"
+      description="Entdecken Sie hochwertige Widerstandsbänder von EXOPEK für effektives Training zuhause. Ideal für alle Fitnesslevel und Trainingsarten."
       keywords="Widerstandsbänder, Fitnessbänder, Resistance Bands, Trainingsbänder Sets, Fitnessband Set, Widerstandsbänder kaufen"
       url="https://fitnessband.exopek.de"
     />

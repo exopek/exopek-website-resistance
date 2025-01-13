@@ -6,12 +6,12 @@ export const useSeoPageContentStore = defineStore('seoPageContent', () => {
   const loading = ref(false);
   const error = ref<string | null>(null);
 
-  const fetchSeoPageContent = async (targetGroup: string): Promise<PageContent> => {
+  const fetchSeoPageContent = async (slug: string): Promise<PageContent> => {
     loading.value = true;
     error.value = null;
 
     try {
-      const response = await fetch('https://exopekwebshop-daf7dmgpamdvbtha.germanywestcentral-01.azurewebsites.net/api/dev/seo-page-content?slug=' + targetGroup);
+      const response = await fetch('https://exopekwebshop-daf7dmgpamdvbtha.germanywestcentral-01.azurewebsites.net/api/dev/seo-page-content?slug=' + slug);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

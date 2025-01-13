@@ -2,14 +2,14 @@
   <div>
     <MetaTags
       v-if="!error"
-      :title="`Widerstandsbänder für ${category.title} | EXOPEK`"
-      :description="`Entdecken Sie unsere speziellen Widerstandsbänder für ${category.title}. Optimale Unterstützung für Ihr Training`"
-      :keywords="`Widerstandsbänder ${category.title}, Fitnessbänder, Training`"
+      :title="`${pageContent?.title} | EXOPEK`"
+      :description="`${pageContent?.title}. Entdecken Sie unsere speziellen Widerstandsbänder für maximalen Erfolg im Training. ${pageContent?.subtitle}`"
+      :keywords="`${pageContent?.title}, Fitnessbänder, Training, Widerstandsbänder, Resistance Bands, Fitness Bands, Widerstandsbänder kaufen, Widerstandsbänder Set, Fitnessband Set`"
       :url="`https://fitnessband.exopek.de/${route.params.slug}`"
     />
     <ProductSchema
       v-if="!error"
-      :description="`Hochwertige Widerstandsbänder für ${category.title}`"
+      :description="`Hochwertige Widerstandsbänder für effektives Training. ${pageContent?.subtitle}`"
     />
 
     <main class="min-h-screen">
@@ -49,7 +49,7 @@
                     ? ""
                     : error
                     ? "Fehler"
-                    : `Widerstandsbänder für ${category.title}`
+                    : `${pageContent?.title}`
                 }}
               </h1>
               <p v-if="!error" class="flex justify-center text-xl md:text-2xl">
@@ -110,7 +110,6 @@ const fetchSeoPageContent = seoPageContentStore.fetchSeoPageContent;
 onMounted(async () => {
   try {
     pageContent.value = await fetchSeoPageContent(route.params.slug as string);
-    console.log("Loaded page content:", pageContent.value);
   } catch (e) {
     console.error("Error loading page content:", e);
   }
