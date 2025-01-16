@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
       
       try {
-        const response = await fetch('http://exopekwebshop-daf7dmgpamdvbtha.germanywestcentral-01.azurewebsites.net/api/dev/seo-page-contents');
+        const response = await fetch('https://exopekwebshop-daf7dmgpamdvbtha.germanywestcentral-01.azurewebsites.net/api/dev/seo-page-contents');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
