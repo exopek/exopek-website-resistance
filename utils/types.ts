@@ -11,10 +11,12 @@ export interface FAQ {
   }
   
   export interface PageContent {
+    slug: string;
     title: string;
     subtitle: string;
     mainContent: Content[];
     faqContent: FAQ[];
+    createdAt: string;
   }
 
   export interface TargetGroup {
