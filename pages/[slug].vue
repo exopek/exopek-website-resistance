@@ -32,7 +32,7 @@
         <Breadcrumb
           :breadcrumbs="[
             { text: 'Startseite', to: '/' },
-            { text: category.title, to: `/${category.slug}` },
+            { text: pageContent?.title, to: `/${pageContent?.slug}` },
           ]"
         />
       </div>
@@ -115,24 +115,4 @@ onMounted(async () => {
     console.error("Error loading page content:", e);
   }
 });
-
-// Validate that the slug exists in our categories
-const { categories } = useCategories();
-const validCategory = computed(() =>
-  categories.value.some(
-    (category: { slug: any }) => category.slug === route.params.slug
-  )
-);
-
-const category = computed(
-  () =>
-    categories.value.find(
-      (category: { slug: any }) => category.slug === route.params.slug
-    ) || { slug: "error", title: "error" }
-);
-
-// Redirect to home if category doesn't exist fcg shjdfb hsdgvcj est
-if (!validCategory.value) {
-  navigateTo("/");
-}
 </script>
