@@ -7,9 +7,6 @@
       url="https://fitnessband.exopek.de"
       :imageAlt="`Premium Widerstandsband Set - 10 Fitnessbänder mit Griffen und Manschetten.`"
     />
-    <ProductSchema
-      description="Hochwertige Widerstandsbänder für effektives Training"
-    />
 
     <main class="min-h-screen">
       <div class="flex justify-center shadow-lg m-2 pb-2">

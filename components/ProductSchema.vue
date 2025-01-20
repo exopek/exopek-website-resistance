@@ -18,10 +18,22 @@ useHead({
         '@type': 'Product',
         name: 'EXOPEK Widerstandsbänder',
         description: props.description,
-        image: 'https://exopek.de/wp-content/uploads/2024/05/zehn-widerstandsbaender-sicher-fixiert.jpg',
+        image: {
+          '@type': 'ImageObject',
+          url: 'https://exopek.de/wp-content/uploads/2024/05/zehn-widerstandsbaender-sicher-fixiert.jpg',
+          width: 1200,
+          height: 630,
+          caption: 'EXOPEK Premium Widerstandsbänder Set'
+        },
         brand: {
           '@type': 'Brand',
-          name: 'EXOPEK'
+          name: 'EXOPEK',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://exopek.de/wp-content/uploads/2023/08/Bildmarke-Schwarz.png',
+            width: 40,
+            height: 40
+          }
         },
         offers: {
           '@type': 'Offer',
