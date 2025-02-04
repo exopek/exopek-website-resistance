@@ -12,8 +12,15 @@ export interface FAQ {
   
   export interface PageContent {
     slug: string;
-    title: string;
-    subtitle: string;
+    h1: string;
+    intoduction: string;
+    conclusion: string;
+    metaDescription: string;
+    metaTitle: string;
+    productSchemaDescription: string;
+    productSchemaName: string;
+    productSchemaPrice: string;
+    productSchemaBrand: string;
     mainContent: Content[];
     faqContent: FAQ[];
     createdAt: string;
@@ -33,6 +40,6 @@ export interface FAQ {
   }
 
   export interface Content {
-    title: string;
+    h2_title: string;
     content: string;
   }

@@ -2,9 +2,8 @@
   <div>
     <MetaTags
       v-if="!error"
-      :title="`${pageContent?.title} | EXOPEK`"
-      :description="`${pageContent?.title}. Entdecken Sie unsere speziellen Widerstandsbänder für maximalen Erfolg im Training. ${pageContent?.subtitle}`"
-      :keywords="`${pageContent?.title}, Fitnessbänder, Training, Widerstandsbänder, Resistance Bands, Fitness Bands, Widerstandsbänder kaufen, Widerstandsbänder Set, Fitnessband Set`"
+      :title="`${pageContent?.metaTitle} | EXOPEK`"
+      :description="`${pageContent?.metaDescription}. Entdecken Sie unsere speziellen Widerstandsbänder für maximalen Erfolg im Training.`"
       :url="`https://fitnessband.exopek.de/${route.params.slug}`"
       :imageAlt="`Premium Widerstandsband Set - 10 Fitnessbänder mit Griffen und Manschetten.`"
     />
@@ -28,7 +27,7 @@
         <Breadcrumb
           :breadcrumbs="[
             { text: 'Startseite', to: '/' },
-            { text: pageContent?.title, to: `/${pageContent?.slug}` },
+            { text: pageContent?.h1, to: `/${pageContent?.slug}` },
           ]"
         />
       </div>
@@ -39,22 +38,19 @@
         ></div>
         <div v-else>
           <header class="flex justify-center text-black pt-8 md:pt-16">
+            
             <div class="max-w-7xl mx-auto px-4">
+              <div class="text-sm">{{ pageContent?.metaTitle }}</div>
+              <div class="text-sm">{{ pageContent?.metaDescription }}</div>
               <h1 class="text-4xl md:text-6xl font-bold mb-2">
                 {{
                   loading
                     ? ""
                     : error
                     ? "Fehler"
-                    : `${pageContent?.title}`
+                    : `${pageContent?.h1}`
                 }}
               </h1>
-              <p v-if="!error" class="flex justify-center text-xl md:text-2xl">
-                {{ pageContent?.subtitle }}
-              </p>
-              <p v-else class="text-xl md:text-2xl text-red-300">
-                {{ error }}
-              </p>
             </div>
           </header>
 
@@ -63,14 +59,14 @@
             class="py-8 md:py-16"
           >
             <div class="px-4">
-              <FitnessBandsSection />
+              <FitnessBandsSection :introduction="pageContent?.intoduction"/>
             </div>
             <div class="px-4">
               <ResistanceBandsBenefits />
             </div>
 
             <div class="px-4 prose lg:prose-xl">
-              <ContentSection :contentArray="pageContent?.mainContent" />
+              <ContentSection :contentArray="pageContent?.mainContent" :conclusion="pageContent?.conclusion" />
             </div>
           </article>
           <FAQSection
@@ -89,7 +85,6 @@
   
   <script setup lang="ts">
 import { useCategories } from "~/composables/useCategories";
-import { useContent } from "~/composables/useContent";
 import { useSeoPageContentStore } from "~/store/seoPageContent";
 import type { PageContent } from "~/utils/types";
 

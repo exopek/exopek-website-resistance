@@ -2,10 +2,9 @@
     <Head>
       <Title>{{ title }}</Title>
       <Meta name="description" :content="description" />
-      <Meta name="keywords" :content="keywords" />
       <Meta property="og:title" :content="title" />
       <Meta property="og:description" :content="description" />
-      <Meta property="og:type" content="website" />
+      <Meta property="og:type" content="article" />
       <Meta property="og:url" :content="url" />
       <Meta property="og:image" :content="imageUrl" />
       <Meta property="og:image:width" content="1200" />
@@ -54,25 +53,10 @@
       children: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'Product',
-        name: props.title,
+        name: 'EXOPEK Pro',
+        brand: 'EXOPEK',
+        image: props.imageUrl,
         description: props.description,
-        image: {
-          '@type': 'ImageObject',
-          url: props.imageUrl,
-          width: 1200,
-          height: 630,
-          caption: props.imageAlt
-        },
-        brand: {
-          '@type': 'Brand',
-          name: 'EXOPEK',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://exopek.de/wp-content/uploads/2023/08/Bildmarke-Schwarz.png',
-            width: 40,
-            height: 40
-          }
-        },
         offers: {
           '@type': 'Offer',
           availability: 'https://schema.org/InStock',

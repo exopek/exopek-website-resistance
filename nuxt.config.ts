@@ -53,7 +53,6 @@ export default defineNuxtConfig({
           throw new Error('Network response was not ok');
         }
         const sites = await response.json();
-        console.log(sites);
         
         return [
           ...sites.map((site: { createdAt: any; slug: any; }) => ({

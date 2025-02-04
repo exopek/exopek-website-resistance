@@ -19,7 +19,6 @@ export const useSeoPageContentStore = defineStore('seoPageContent', () => {
       const value = await response.json();
       console.log(value);
       content.value = value;
-      console.log(content.value);
     } catch (e) {
       error.value = 'Fehler beim Laden der SEO-Inhalte';
     } finally {
