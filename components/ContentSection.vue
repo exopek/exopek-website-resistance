@@ -1,17 +1,17 @@
 <template> 
     <div class="max-w-7xl mx-auto">
-    <h2 class="text-xl font-semibold mb-2">{{ firstContent.h2_title }}</h2>
-    <p class="text-gray-600 space-y-6">{{ firstContent.content }}</p>
+    <h2 class="text-xl font-semibold mb-2" id="content-0">{{ firstContent.h2_title }}</h2>
+    <p v-html="firstContent.content" class="text-gray-600 space-y-6"></p>
     <ProductCarousell></ProductCarousell>
     <div class="space-y-4">
         <div v-for="(con, index) in otherContent" :key="index">
-          <h2 class="text-xl font-semibold mb-2">{{ con.h2_title }}</h2>
-          <div class="text-gray-600">{{ con.content }}</div>
+          <h2 class="text-xl font-semibold mb-2" :id="'content-' + index">{{ con.h2_title }}</h2>
+          <div v-html="con.content" class="text-gray-600"></div>
         </div>
     </div>
     <div class="space-y-4 pt-4">
-        <h2 class="text-xl font-semibold mb-2">Fazit</h2>
-        <div class="text-gray-600">{{ conclusion }}</div>
+        <h2 class="text-xl font-semibold mb-2" id="fazit">Fazit</h2>
+        <div v-html="conclusion" class="text-gray-600"></div>
 
     </div>
     </div>

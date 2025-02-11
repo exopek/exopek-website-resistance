@@ -12,7 +12,7 @@ export const useSeoPageContentStore = defineStore('seoPageContent', () => {
     error.value = null;
 
     try {
-      const response = await fetch('https://exopekwebshop-daf7dmgpamdvbtha.germanywestcentral-01.azurewebsites.net/api/dev/seo-page-content?slug=' + slug);
+      const response = await fetch('http://localhost:5136/api/dev/seo-page-content?slug=' + slug);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

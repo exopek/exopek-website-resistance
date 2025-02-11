@@ -24,6 +24,7 @@ export interface FAQ {
     mainContent: Content[];
     faqContent: FAQ[];
     createdAt: string;
+    keyTakeaways: string[];
   }
 
   export interface TargetGroup {
