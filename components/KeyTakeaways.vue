@@ -9,7 +9,7 @@
           <ul class="space-y-3" v-for="(keyTakeaway, index) in keyTakeaways" :key="index">
             <li class="flex items-center gap-3">
               <RoundCheckSvg />
-              {{ keyTakeaway }}
+              <p v-html="keyTakeaway"></p>
             </li>
           </ul>
         </div>
