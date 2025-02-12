@@ -5,7 +5,7 @@
         <div class="space-y-6">
           <div v-for="(faq, index) in faqs" :key="index" class="bg-white p-6 rounded-lg shadow">
             <h3 class="text-xl font-semibold mb-2">{{ faq.question }}</h3>
-            <p class="text-gray-600">{{ faq.answer }}</p>
+            <p v-html="faq.answer" class="text-gray-600"></p>
           </div>
         </div>
       </div>
