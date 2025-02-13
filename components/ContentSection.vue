@@ -4,7 +4,7 @@
       <ProductCarousell></ProductCarousell>
     <h2 class="text-xl font-semibold mb-2" id="content-0">{{ firstContent.h2_title }}</h2>
     <p v-if="firstContent.preview_image_url === undefined" v-html="firstContent.content" class="text-gray-600"></p>
-          <div v-else class="grid md:grid-rows-2 grid-cols-2">
+          <div v-else class="grid md:grid-cols-2 grid-cols-1">
             <p v-html="firstContent.content" class="text-gray-600"></p>
             <img :src="firstContent.preview_image_url" alt="content image" loading="lazy" class="w-full h-auto">
         </div>
@@ -13,7 +13,7 @@
         <div v-for="(con, index) in otherContent" :key="index">
           <h2 class="text-xl font-semibold mb-2" :id="'content-' + index">{{ con.h2_title }}</h2>
           <div v-if="con.preview_image_url === undefined" v-html="con.content" class="text-gray-600"></div>
-          <div v-else class="grid md:grid-rows-2 grid-cols-2">
+          <div v-else class="grid md:grid-cols-2 grid-cols-1">
             <p v-html="con.content" class="text-gray-600"></p>
             <img :src="con.preview_image_url" alt="content image" loading="lazy" class="w-full h-auto">
         </div>
