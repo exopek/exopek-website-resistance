@@ -43,4 +43,5 @@ export interface FAQ {
   export interface Content {
     h2_title: string;
     content: string;
+    imageUrl: string;
   }
