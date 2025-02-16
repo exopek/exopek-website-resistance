@@ -46,7 +46,7 @@ export default defineNuxtConfig({
             changefreq: 'daily',
             priority: 0.8,
             lastmod: site.createdAt,
-            loc: `https://fitnessband.exopek.de/${site.slug}`
+            loc: `https://bands.exopek.de/${site.slug}`
           }))
         ];
       } catch (error) {
